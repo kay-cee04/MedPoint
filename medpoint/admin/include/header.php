@@ -22,7 +22,7 @@
 						<ul class="nav navbar-right">
 							<!-- start: MESSAGES DROPDOWN -->
 								<li  style="padding-top:2% ">
-								<h2>HDIMS</h2>
+								<h2>Admin</h2>
 							</li>
 						
 						

@@ -44,7 +44,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             <li><a href="#">Home</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#logins">Logins</a></li> 
+                            <li><a href="#logins">Logins</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2 d-none d-lg-block appoint">
@@ -75,7 +75,7 @@ echo "<script>window.location.href ='index.php'</script>";
                     <img class="d-block w-100" src="assets/images/slider/slider_4.jpg" alt="Second slide">
                     <div class="carousel-cover"></div>
                     <div class="carousel-caption vdg-cur d-none d-md-block">
-                        <h5 class="animated bounceInDown"</h5>
+                        <h5 class="animated bounceInDown"></h5>
             
                          
                     
@@ -236,9 +236,6 @@ echo "<script>window.location.href ='index.php'</script>";
 
     </section>
     
-    
-  
-
     
     
             <!--  ************************* Gallery Starts Here ************************** -->

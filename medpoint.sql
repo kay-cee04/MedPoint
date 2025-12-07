@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `updationDate`) VALUES
-(1, 'admin', 'Test@12345', '04-03-2024 11:42:05 AM');
+(1, 'admin', 'Test@12345', '04-03-2025 11:42:05 AM');
 
 -- --------------------------------------------------------
 
@@ -66,8 +66,8 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`id`, `doctorSpecialization`, `doctorId`, `userId`, `consultancyFees`, `appointmentDate`, `appointmentTime`, `postingDate`, `userStatus`, `doctorStatus`, `updationDate`) VALUES
-(1, 'ENT', 1, 1, 500, '2024-05-30', '9:15 AM', '2024-05-15 03:42:11', 1, 1, NULL),
-(2, 'Endocrinologists', 2, 2, 800, '2024-05-31', '2:45 PM', '2024-05-16 09:08:54', 1, 1, NULL);
+(1, 'ENT', 1, 1, 500, '2025-09-30', '9:15 AM', '2025-09-15 03:42:11', 1, 1, NULL),
+(2, 'Endocrinologists', 2, 2, 800, '2025-09-31', '2:45 PM', '2025-09-16 09:08:54', 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -93,12 +93,12 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`, `contactno`, `docEmail`, `password`, `creationDate`, `updationDate`) VALUES
-(1, 'ENT', 'Anuj kumar', 'A 123 XYZ Apartment Raj Nagar Ext Ghaziabad', '500', 142536250, 'anujk123@test.com', 'f925916e2754e5e03f75dd58a5733251', '2024-04-10 18:16:52', '2024-05-14 09:26:17'),
-(2, 'Endocrinologists', 'Charu Dua', 'X 1212 ABC Apartment Laxmi Nagar New Delhi ', '800', 1231231230, 'charudua12@test.com', 'f925916e2754e5e03f75dd58a5733251', '2024-04-11 01:06:41', '2024-05-14 09:26:28'),
-(4, 'Pediatrics', 'Priyanka Sinha', 'A 123 Xyz Aparmtnent Ghaziabad', '700', 74561235, 'p12@t.com', 'f925916e2754e5e03f75dd58a5733251', '2024-05-16 09:12:23', NULL),
-(5, 'Orthopedics', 'Vipin Tayagi', 'Yasho Hospital New Delhi', '1200', 95214563210, 'vpint123@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2024-05-16 09:13:11', NULL),
-(6, 'Internal Medicine', 'Dr Romil', 'Max Hospital Vaishali  GZB', '1500', 8563214751, 'drromil12@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2024-05-16 09:14:11', NULL),
-(7, 'Obstetrics and Gynecology', 'Bhavya rathore', 'Shop 12 Indira Puram Ghaziabad', '800', 745621330, 'bhawya12@tt.com', 'f925916e2754e5e03f75dd58a5733251', '2024-05-16 09:15:18', NULL);
+(1, 'ENT', 'Emily Hartman,', '249 Maple Ridge Clinic, Suite 204, Brookhaven', '500', 142536250, 'emilyhartman@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-10 18:16:52', '2025-09-14 09:26:17'),
+(2, 'Endocrinologists', 'Samuel Cho', '88 Crescent Bay Medical Center, Floor 3, Harbor City', '800', 1231231230, 'samuelcho@yahoo.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-11 01:06:41', '2025-09-14 09:26:28'),
+(4, 'Pediatrics', 'Sofia Delgado', '501 Sunrise Pediatrics Building, Apt. 5A, Silverlake', '700', 74561235, 'sofiadelgado@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-16 09:12:23', NULL),
+(5, 'Orthopedics', 'Lucas Moreno', 'Y1320 Westgate Dental Park, Suite 110, Millford', '1200', 95214563210, 'lucasmoreno@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-16 09:13:11', NULL),
+(6, 'Internal Medicine', 'Henry Patel', 'Max Hospital Vaishali  GZB', '1500', 8563214751, 'drromil12@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-16 09:14:11', NULL),
+(7, 'Obstetrics and Gynecology', 'Vivian Clarke', '301 Horizon Neuro Center, Suite 225, Westbrook', '800', 745621330, 'vivianclarke@yahoo.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-16 09:15:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -121,16 +121,16 @@ CREATE TABLE `doctorslog` (
 --
 
 INSERT INTO `doctorslog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`, `status`) VALUES
-(1, 1, 'anujk123@test.com', 0x3a3a3100000000000000000000000000, '2024-05-16 05:19:33', NULL, 1),
-(2, 1, 'anujk123@test.com', 0x3a3a3100000000000000000000000000, '2024-05-16 09:01:03', '16-05-2024 02:37:32 PM', 1);
+(1, 1, 'emilyhartman@gmail.com', 0x3a3a3100000000000000000000000000, '2025-09-16 05:19:33', NULL, 1),
+(2, 1, 'vivianclarke@yahoo.com', 0x3a3a3100000000000000000000000000, '2025-09-16 09:01:03', '16-09-2025 02:37:32 PM', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctorspecilization`
+-- Table structure for table `doctorspecialization`
 --
 
-CREATE TABLE `doctorspecilization` (
+CREATE TABLE `doctorspecialization` (
   `id` int(11) NOT NULL,
   `specilization` varchar(255) DEFAULT NULL,
   `creationDate` timestamp NULL DEFAULT current_timestamp(),
@@ -138,25 +138,25 @@ CREATE TABLE `doctorspecilization` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `doctorspecilization`
+-- Dumping data for table `doctorspecialization`
 --
 
-INSERT INTO `doctorspecilization` (`id`, `specilization`, `creationDate`, `updationDate`) VALUES
-(1, 'Orthopedics', '2024-04-09 18:09:46', '2024-05-14 09:26:47'),
-(2, 'Internal Medicine', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(3, 'Obstetrics and Gynecology', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(4, 'Dermatology', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(5, 'Pediatrics', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(6, 'Radiology', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(7, 'General Surgery', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(8, 'Ophthalmology', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(9, 'Anesthesia', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(10, 'Pathology', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(11, 'ENT', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(12, 'Dental Care', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(13, 'Dermatologists', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(14, 'Endocrinologists', '2024-04-09 18:09:46', '2024-05-14 09:26:56'),
-(15, 'Neurologists', '2024-04-09 18:09:46', '2024-05-14 09:26:56');
+INSERT INTO `doctorspecialization` (`id`, `specilization`, `creationDate`, `updationDate`) VALUES
+(1, 'Orthopedics', '2025-04-09 18:09:46', '2025-05-14 09:26:47'),
+(2, 'Internal Medicine', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(3, 'Obstetrics and Gynecology', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(4, 'Dermatology', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(5, 'Pediatrics', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(6, 'Radiology', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(7, 'General Surgery', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(8, 'Ophthalmology', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(9, 'Anesthesia', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(10, 'Pathology', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(11, 'ENT', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(12, 'Dental Care', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(13, 'Dermatologists', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(14, 'Endocrinologists', '2025-04-09 18:09:46', '2025-05-14 09:26:56'),
+(15, 'Neurologists', '2025-04-09 18:09:46', '2025-05-14 09:26:56');
 
 -- --------------------------------------------------------
 
@@ -181,8 +181,8 @@ CREATE TABLE `tblcontactus` (
 --
 
 INSERT INTO `tblcontactus` (`id`, `fullname`, `email`, `contactno`, `message`, `PostingDate`, `AdminRemark`, `LastupdationDate`, `IsRead`) VALUES
-(1, 'Anuj kumar', 'anujk30@test.com', 1425362514, 'This is for testing purposes.   This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.', '2024-04-20 16:52:03', NULL, '2024-05-14 09:27:15', NULL),
-(2, 'Anuj kumar', 'ak@gmail.com', 1111122233, 'This is for testing', '2024-04-23 13:13:41', 'Contact the patient', '2024-04-27 13:13:57', 1);
+(1, 'Emily Hartman', 'emilyhartman0@gmail.com', 1425362514, 'This is for testing purposes.   This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.This is for testing purposes.', '2025-04-20 16:52:03', NULL, '2025-05-14 09:27:15', NULL),
+(2, 'Samuel Cho', 'samuelcho@gmail.com', 1111122233, 'This is for testing', '2025-04-23 13:13:41', 'Contact the patient', '2025-04-27 13:13:57', 1);
 
 -- --------------------------------------------------------
 
@@ -206,7 +206,7 @@ CREATE TABLE `tblmedicalhistory` (
 --
 
 INSERT INTO `tblmedicalhistory` (`ID`, `PatientID`, `BloodPressure`, `BloodSugar`, `Weight`, `Temperature`, `MedicalPres`, `CreationDate`) VALUES
-(1, 2, '80/120', '110', '85', '97', 'Dolo,\r\nLevocit 5mg', '2024-05-16 09:07:16');
+(1, 2, '80/120', '110', '85', '97', 'Dolo,\r\nLevocit 5mg', '2025-05-16 09:07:16');
 
 -- --------------------------------------------------------
 
@@ -229,6 +229,7 @@ CREATE TABLE `tblpage` (
 -- Dumping data for table `tblpage`
 --
 
+<<<<<<< HEAD
 INSERT INTO `tblpage` (`ID`, `PageType`, `PageTitle`, `PageDescription`, `Email`, `MobileNumber`, `UpdationDate`, `OpenningTime`) VALUES
 (1, 'aboutus', 'About Us', '<ul style=\"padding: 0px; margin-right: 0px; margin-bottom: 1.313em; margin-left: 1.655em;\" times=\"\" new=\"\" roman\";=\"\" font-size:=\"\" 14px;=\"\" text-align:=\"\" center;=\"\" background-color:=\"\" rgb(255,=\"\" 246,=\"\" 246);\"=\"\"><li style=\"text-align: left;\"><font color=\"#000000\">
 MedPoint is designed for Any Hospital to replace their existing manual, paper based system. The new system is to control the following information; patient information,
@@ -240,6 +241,48 @@ operating theater scheduling and various facilities waiting lists. All of this i
 institution\'s resources may be effectively utilized MedPoint will automate the management of the hospital making it more efficient and error free. It aims at
 standardizing data, consolidating data ensuring data integrity and reducing inconsistencies.&nbsp;</font></li></ul>', NULL, NULL, '2020-05-20 07:21:52', NULL),
 (2, 'contactus', 'Contact Details', 'Cebu City,\r\nABC, XYZ, Philippines', 'info@gmail.com', 123567890, '2020-05-20 07:24:07', '9 am To 8 Pm');
+=======
+INSERT INTO `tblpage` 
+(`ID`, `PageType`, `PageTitle`, `PageDescription`, `Email`, `MobileNumber`, `UpdationDate`, `OpenningTime`) 
+VALUES
+(1, 'aboutus', 'About Us', 
+'<ul style="padding-left: 20px; margin: 0;">
+    <li style="text-align: left; color: #000;">
+        <p>
+            MedPoint is a modern and user-friendly doctor appointment management system 
+            designed to make healthcare scheduling easier for both patients and medical professionals. 
+            Our platform replaces traditional appointment methods with a simple, reliable, and 
+            organized digital solution.
+        </p>
+
+        <p>
+            With MedPoint, patients can easily browse available doctors, book appointments, and 
+            keep track of their upcoming visits—all from one convenient place. The system provides 
+            clear appointment details, reminders, and a smooth booking experience that helps patients 
+            stay informed and connected to their healthcare providers.
+        </p>
+
+        <p>
+            For doctors, MedPoint offers a clean and efficient dashboard that displays all scheduled 
+            appointments at a glance. This helps doctors manage their daily workflow, reduce scheduling 
+            conflicts, and spend more time focusing on patient care rather than administrative tasks.
+        </p>
+
+        <p>
+            MedPoint is built to improve communication, reduce waiting times, and streamline the 
+            appointment process for everyone involved. By bringing patients and doctors together through 
+            a simple and transparent system, MedPoint aims to enhance the overall healthcare experience 
+            and support a more organized, accessible, and efficient medical environment.
+        </p>
+    </li>
+</ul>', 
+NULL, NULL, '2025-05-20 07:21:52', NULL),
+
+(2, 'contactus', 'Contact Details', 
+'Cebu City,\r\nABC, XYZ, Philippines', 
+'info@gmail.com', 123567890, '2025-05-20 07:24:07', '9 am To 8 pm');
+
+>>>>>>> 499a00047a51e6a0efcba8d3685b9e39cfb1e097
 
 -- --------------------------------------------------------
 
@@ -266,8 +309,8 @@ CREATE TABLE `tblpatient` (
 --
 
 INSERT INTO `tblpatient` (`ID`, `Docid`, `PatientName`, `PatientContno`, `PatientEmail`, `PatientGender`, `PatientAdd`, `PatientAge`, `PatientMedhis`, `CreationDate`, `UpdationDate`) VALUES
-(1, 1, 'Rahul Singyh', 452463210, 'rahul12@gmail.com', 'male', 'NA', 32, 'Fever, Cold', '2024-05-16 05:23:35', NULL),
-(2, 1, 'Amit', 4545454545, 'amitk@gmail.com', 'male', 'NA', 45, 'Fever', '2024-05-16 09:01:26', NULL);
+(1, 1, 'Nia Thompson', 452463210, 'niathompson@gmail.com', 'female', 'NA', 32, 'Fever, Cold', '2025-05-16 05:23:35', NULL),
+(2, 1, 'Jacob Reinhart', 4545454545, 'jacobreinhart@gmail.com', 'male', 'NA', 45, 'Fever', '2025-05-16 09:01:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -290,8 +333,8 @@ CREATE TABLE `userlog` (
 --
 
 INSERT INTO `userlog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`, `status`) VALUES
-(1, 1, 'johndoe12@test.com', 0x3a3a3100000000000000000000000000, '2024-05-15 03:41:48', NULL, 1),
-(2, 2, 'amitk@gmail.com', 0x3a3a3100000000000000000000000000, '2024-05-16 09:08:06', '16-05-2024 02:41:06 PM', 1);
+(1, 1, 'teresamontoya@gmail.com', 0x3a3a3100000000000000000000000000, '2025-05-15 03:41:48', NULL, 1),
+(2, 2, 'lillianbrooks@gmail.com', 0x3a3a3100000000000000000000000000, '2025-05-16 09:08:06', '16-05-2025 02:41:06 PM', 1);
 
 -- --------------------------------------------------------
 
@@ -316,8 +359,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `password`, `regDate`, `updationDate`) VALUES
-(1, 'John Doe', 'A 123 ABC Apartment GZB 201017', 'Ghaziabad', 'male', 'johndoe12@test.com', 'f925916e2754e5e03f75dd58a5733251', '2024-04-20 12:13:56', '2024-05-14 09:28:15'),
-(2, 'Amit kumar', 'new Delhi india', 'New Delhi', 'male', 'amitk@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2024-04-21 13:15:32', '2024-05-14 09:28:23');
+(1, 'Emily Hartman', '249 Maple Ridge Clinic, Suite 204', 'Brookhaven', 'female', 'emilyhartman@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-20 12:13:56', '2025-09-14 09:28:15'),
+(2, 'Samuel Cho', '88 Crescent Bay Medical Center', 'Harbor City', 'male', 'samuelcho@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2025-09-21 13:15:32', '2025-09-14 09:28:23');
 
 --
 -- Indexes for dumped tables
