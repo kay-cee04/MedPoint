@@ -21,11 +21,10 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | View Patients Report</title>
+    <title>Patients Report | Admin</title>
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Using Font Awesome 6 from CDN for better icon support -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Vendor CSS -->
@@ -34,10 +33,6 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
     <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
     <link rel="stylesheet" href="vendor/perfect-scrollbar/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="vendor/switchery/switchery.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css">
-    <link rel="stylesheet" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-timepicker/bootstrap-timepicker.min.css">
     
     <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -56,132 +51,82 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
         
         .main-content {
             background: #f0f4f8;
-            padding: 35px 40px;
         }
         
-        /* Modern Page Header - FIXED FOR READABILITY */
-        .page-header-modern {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 24px;
-            padding: 45px 50px;
-            margin-bottom: 40px;
-            color: #ffffff;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
-            position: relative;
-            overflow: hidden;
+        .wrap-content {
+            padding: 40px 30px;
         }
         
-        .page-header-modern::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 400px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 50%;
-            pointer-events: none;
+        /* Simple Page Title - Matching Dashboard Style */
+        #page-title {
+            background: transparent;
+            padding: 0 0 35px 0;
+            border: none;
         }
         
-        /* FIXED: Made title fully white and more visible */
-        .page-header-modern h1 {
+        #page-title .mainTitle {
             font-size: 36px;
             font-weight: 800;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            position: relative;
-            z-index: 1;
-            letter-spacing: -0.5px;
-            color: #ffffff !important;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-        
-        .page-header-modern h1 i {
-            color: #ffffff !important;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-        }
-        
-        /* FIXED: Made subtitle more readable */
-        .page-header-modern p {
-            font-size: 16px;
-            opacity: 1;
-            color: rgba(255, 255, 255, 0.95);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin: 0;
-            position: relative;
-            z-index: 1;
-            font-weight: 500;
+            letter-spacing: -1px;
         }
         
-        .breadcrumb-modern {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 12px 24px;
-            border-radius: 30px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
+        #page-title .breadcrumb {
+            background: transparent;
+            padding: 12px 0;
+            margin: 12px 0 0 0;
             font-size: 14px;
-            position: relative;
-            z-index: 1;
-            margin-top: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
         }
         
-        .breadcrumb-modern span {
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
+        #page-title .breadcrumb li {
+            color: #64748b;
+            font-weight: 400;
         }
         
-        .breadcrumb-modern .active {
-            color: #ffffff;
-            font-weight: 700;
+        #page-title .breadcrumb li.active {
+            color: #334155;
+            font-weight: 600;
         }
         
-        .breadcrumb-modern i {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 12px;
-        }
-        
-        /* Date Range Display - Simple & Clean */
+        /* Simple Date Range Display */
         .date-range-simple {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             margin-bottom: 30px;
             font-size: 15px;
-            color: #475569;
+            flex-wrap: wrap;
         }
         
-        .date-label {
+        .date-range-simple .date-label {
             font-weight: 600;
             color: #64748b;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
         }
         
-        .date-values {
+        .date-range-simple .date-value {
             font-weight: 700;
             color: #0f172a;
         }
         
-        .date-separator {
+        .date-range-simple .date-separator {
             color: #667eea;
-            font-weight: 600;
-            padding: 0 6px;
+            font-weight: 700;
         }
         
-        /* Glass Table Card */
-        .table-card-glass {
+        /* Table Card */
+        .table-card {
             background: #ffffff;
-            border-radius: 24px;
+            border-radius: 20px;
             padding: 35px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s ease;
-        }
-        
-        .table-card-glass:hover {
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
         }
         
         .card-header-section {
@@ -191,6 +136,8 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             margin-bottom: 30px;
             padding-bottom: 24px;
             border-bottom: 2px solid #e2e8f0;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .card-header-left {
@@ -249,10 +196,17 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
         }
         
         /* Modern Table */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 12px;
+        }
+        
         .table-modern {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
+            min-width: 900px;
         }
         
         .table-modern thead {
@@ -274,7 +228,6 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
         
         .table-modern thead th:first-child {
             border-radius: 12px 0 0 0;
-            width: 60px;
             text-align: center;
         }
         
@@ -289,8 +242,6 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
         
         .table-modern tbody tr:hover {
             background: linear-gradient(135deg, #f8faff 0%, #f1f5ff 100%);
-            transform: scale(1.001);
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
         }
         
         .table-modern tbody td {
@@ -302,14 +253,6 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
         
         .table-modern tbody td:first-child {
             text-align: center;
-        }
-        
-        .table-modern tbody tr:last-child td:first-child {
-            border-radius: 0 0 0 12px;
-        }
-        
-        .table-modern tbody tr:last-child td:last-child {
-            border-radius: 0 0 12px 0;
         }
         
         /* Table Cell Styles */
@@ -326,8 +269,6 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
         }
         
         .cell-content {
-            display: block;
-            width: 100%;
             color: #475569;
             font-weight: 500;
         }
@@ -389,7 +330,6 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
             color: #ffffff;
             text-decoration: none;
-            background: linear-gradient(135deg, #7c8ff0 0%, #8557ac 100%);
         }
         
         .btn-view i {
@@ -429,52 +369,25 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             font-size: 15px;
             color: #64748b;
             line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
         }
         
         /* Back Button */
-        .btn-back {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.25);
-            color: #ffffff;
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn-back:hover {
-            background: rgba(255, 255, 255, 0.35);
-            border-color: rgba(255, 255, 255, 0.6);
-            color: #ffffff;
-            text-decoration: none;
-            transform: translateX(-5px);
-        }
-        
-        .btn-back i {
-            font-size: 14px;
-        }
-        
-        /* Back Button Bottom - NEW CLEAR DESIGN */
         .btn-back-bottom {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 16px 32px;
+            padding: 14px 28px;
             background: #ffffff;
             color: #667eea;
             border: 2px solid #667eea;
-            border-radius: 14px;
+            border-radius: 12px;
             font-size: 15px;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
         }
         
         .btn-back-bottom:hover {
@@ -483,7 +396,7 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             border-color: #667eea;
             text-decoration: none;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
         }
         
         .btn-back-bottom i {
@@ -495,22 +408,28 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             transform: translateX(-4px);
         }
         
+        /* Container Overrides */
+        .container-fluid.container-fullw {
+            background: transparent;
+            padding: 0;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
-            .main-content {
-                padding: 20px 16px;
+            .wrap-content {
+                padding: 24px 16px;
             }
             
-            .page-header-modern {
-                padding: 30px 24px;
-                border-radius: 16px;
-            }
-            
-            .page-header-modern h1 {
+            #page-title .mainTitle {
                 font-size: 28px;
             }
             
-            .table-card-glass {
+            .date-range-simple {
+                font-size: 13px;
+                gap: 8px;
+            }
+            
+            .table-card {
                 padding: 20px;
                 border-radius: 16px;
             }
@@ -518,37 +437,12 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             .card-header-section {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 15px;
             }
             
-            .table-wrapper {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                margin: 0 -20px;
-                padding: 0 20px;
+            .stat-badge {
+                width: 100%;
+                justify-content: center;
             }
-            
-            .table-modern {
-                min-width: 900px;
-            }
-            
-            .breadcrumb-modern i {
-                color: rgba(255, 255, 255, 0.7);
-                font-size: 12px;
-            }
-            
-            .date-range-simple {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-                font-size: 14px;
-            }
-        }
-        
-        /* Container Overrides */
-        .container-fluid.container-fullw {
-            background: transparent;
-            padding: 0;
         }
     </style>
 </head>
@@ -562,24 +456,34 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
             <div class="main-content">
                 <div class="wrap-content container" id="container">
                     
-                    <!-- Modern Page Header -->
-                    <div class="page-header-modern">
-                        <h1>
-                            <i class="fas fa-file-medical"></i>
-                            Patients Report
-                        </h1>
-                        <p>View patients registered within the selected date range</p>
-                    </div>
+                    <!-- Simple Page Title -->
+                    <section id="page-title">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h1 class="mainTitle">Patients Report</h1>
+                            </div>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <span>Admin</span>
+                                </li>
+                                <li>
+                                    <span>Reports</span>
+                                </li>
+                                <li class="active">
+                                    <span>View Report</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
                     
-                    <!-- Date Range Display -->
+                    <!-- Date Range Info -->
                     <?php if($fdate && $tdate): ?>
                     <div class="date-range-simple">
-                        <span class="date-label">Report Date Range:</span>
-                        <span class="date-values">
-                            <?php echo date('F d, Y', strtotime($fdate)); ?> 
-                            <span class="date-separator">to</span> 
-                            <?php echo date('F d, Y', strtotime($tdate)); ?>
-                        </span>
+                        <span class="date-label">Report Date Range</span>
+                        <span class="date-separator">→</span>
+                        <span class="date-value"><?php echo date('F d, Y', strtotime($fdate)); ?></span>
+                        <span class="date-separator">→</span>
+                        <span class="date-value"><?php echo date('F d, Y', strtotime($tdate)); ?></span>
                     </div>
                     <?php endif; ?>
                     
@@ -588,7 +492,7 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
                         <div class="row">
                             <div class="col-md-12">
                                 
-                                <div class="table-card-glass">
+                                <div class="table-card">
                                     <div class="card-header-section">
                                         <div class="card-header-left">
                                             <div class="card-icon-badge">
@@ -620,7 +524,7 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
                                         <table class="table-modern">
                                             <thead>
                                                 <tr>
-                                                    <th style="text-align: center;">#</th>
+                                                    <th>#</th>
                                                     <th>PATIENT NAME</th>
                                                     <th>CONTACT NUMBER</th>
                                                     <th>GENDER</th>
@@ -718,25 +622,22 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
                                     </div>
                                 </div>
                                 
+                                <!-- Back Button -->
+                                <div style="text-align: center; margin-top: 30px;">
+                                    <a href="between-dates-reports.php" class="btn-back-bottom">
+                                        <i class="fas fa-arrow-left"></i>
+                                        Back to Date Selection
+                                    </a>
+                                </div>
+                                
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Back Button Section -->
-                    <div style="margin-top: 30px; text-align: center;">
-                        <a href="between-dates-reports.php" class="btn-back-bottom">
-                            <i class="fas fa-arrow-left"></i>
-                            Back to Date Selection
-                        </a>
                     </div>
                     
                 </div>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <?php include('include/footer.php'); ?>
-        
+                
         <!-- Settings -->
         <?php include('include/setting.php'); ?>
     </div>
@@ -748,25 +649,11 @@ $tdate = isset($_POST['todate']) ? $_POST['todate'] : '';
     <script src="vendor/jquery-cookie/jquery.cookie.js"></script>
     <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="vendor/switchery/switchery.min.js"></script>
-    
-    <!-- Page Specific JavaScripts -->
-    <script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
-    <script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-    <script src="vendor/autosize/autosize.min.js"></script>
-    <script src="vendor/selectFx/classie.js"></script>
-    <script src="vendor/selectFx/selectFx.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-    
-    <!-- Theme JavaScripts -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/form-elements.js"></script>
     
     <script>
         jQuery(document).ready(function() {
             Main.init();
-            FormElements.init();
         });
     </script>
 </body>

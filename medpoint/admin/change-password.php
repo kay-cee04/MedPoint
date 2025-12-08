@@ -29,7 +29,7 @@ $_SESSION['msg1']="Old Password not match !!";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | Change Password</title>
+		<title>Change Password | Admin</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,10 +47,6 @@ $_SESSION['msg1']="Old Password not match !!";
 		<link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="screen">
 		<link href="vendor/perfect-scrollbar/perfect-scrollbar.min.css" rel="stylesheet" media="screen">
 		<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/select2/select2.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
 		
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="assets/css/styles.css">
@@ -69,77 +65,55 @@ $_SESSION['msg1']="Old Password not match !!";
 			
 			.main-content {
 				background: #f0f4f8;
-				padding: 35px 40px;
 			}
 			
-			/* Modern Page Header - Compact */
-			.page-header-modern {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				border-radius: 20px;
-				padding: 30px 40px;
-				margin-bottom: 35px;
-				color: #ffffff;
-				box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
-				position: relative;
-				overflow: hidden;
-			}
-			
-			.page-header-modern::before {
-				content: '';
-				position: absolute;
-				top: -50%;
-				right: -20%;
-				width: 350px;
-				height: 350px;
-				background: rgba(255, 255, 255, 0.06);
-				border-radius: 50%;
-				pointer-events: none;
-			}
-			
-			.page-header-modern h1 {
-				font-size: 28px;
-				font-weight: 700;
-				margin-bottom: 6px;
-				display: flex;
-				align-items: center;
-				gap: 12px;
-				position: relative;
-				z-index: 1;
-				letter-spacing: -0.5px;
-				color: #ffffff !important;
-				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-			}
-			
-			.page-header-modern h1 i {
-				color: #ffffff !important;
-				filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-				font-size: 24px;
-			}
-			
-			.page-header-modern p {
-				font-size: 14px;
-				opacity: 1;
-				color: rgba(255, 255, 255, 0.95);
-				margin: 0;
-				position: relative;
-				z-index: 1;
-				font-weight: 500;
-			}
-			
-			/* Form Card - Compact and Centered */
-			.form-card-modern {
-				background: #ffffff;
-				border-radius: 20px;
-				padding: 32px;
-				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-				border: 1px solid #e2e8f0;
-				transition: all 0.4s ease;
-				max-width: 600px;
+			.wrap-content {
+				padding: 40px 30px;
+				max-width: 700px;
 				margin: 0 auto;
 			}
 			
-			.form-card-modern:hover {
-				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+			/* Simple Page Title - Matching Dashboard Style */
+			#page-title {
+				background: transparent;
+				padding: 0 0 35px 0;
+				border: none;
+			}
+			
+			#page-title .mainTitle {
+				font-size: 36px;
+				font-weight: 800;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				margin: 0;
+				letter-spacing: -1px;
+			}
+			
+			#page-title .breadcrumb {
+				background: transparent;
+				padding: 12px 0;
+				margin: 12px 0 0 0;
+				font-size: 14px;
+			}
+			
+			#page-title .breadcrumb li {
+				color: #64748b;
+				font-weight: 400;
+			}
+			
+			#page-title .breadcrumb li.active {
+				color: #334155;
+				font-weight: 600;
+			}
+			
+			/* Form Card */
+			.form-card {
+				background: #ffffff;
+				border-radius: 20px;
+				padding: 35px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 			}
 			
 			.form-header {
@@ -152,37 +126,36 @@ $_SESSION['msg1']="Old Password not match !!";
 			}
 			
 			.form-icon-badge {
-				width: 48px;
-				height: 48px;
+				width: 52px;
+				height: 52px;
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 				border-radius: 14px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+				flex-shrink: 0;
 			}
 			
 			.form-icon-badge i {
 				color: #ffffff;
-				font-size: 20px;
+				font-size: 22px;
 			}
 			
-			.form-title {
+			.form-header-content h2 {
 				font-size: 20px;
 				font-weight: 700;
 				color: #0f172a;
-				margin: 0;
-				letter-spacing: -0.5px;
+				margin: 0 0 4px 0;
 			}
 			
-			.form-subtitle {
+			.form-header-content p {
 				font-size: 13px;
 				color: #64748b;
-				margin: 4px 0 0 0;
-				font-weight: 500;
+				margin: 0;
 			}
 			
-			/* Alert Messages - Compact */
+			/* Alert Messages */
 			.alert-modern {
 				border-radius: 12px;
 				padding: 14px 18px;
@@ -223,22 +196,22 @@ $_SESSION['msg1']="Old Password not match !!";
 				font-size: 18px;
 			}
 			
-			/* Form Groups - Compact */
-			.form-group-modern {
-				margin-bottom: 20px;
+			/* Form Groups */
+			.form-group {
+				margin-bottom: 22px;
 			}
 			
-			.form-label-modern {
-				font-size: 13px;
+			.form-group label {
+				font-size: 14px;
 				font-weight: 600;
 				color: #334155;
-				margin-bottom: 8px;
+				margin-bottom: 10px;
 				display: flex;
 				align-items: center;
-				gap: 6px;
+				gap: 8px;
 			}
 			
-			.form-label-modern i {
+			.form-group label i {
 				color: #667eea;
 				font-size: 14px;
 			}
@@ -247,47 +220,38 @@ $_SESSION['msg1']="Old Password not match !!";
 				position: relative;
 			}
 			
-			.input-icon {
-				position: absolute;
-				left: 14px;
-				top: 50%;
-				transform: translateY(-50%);
-				color: #94a3b8;
-				font-size: 16px;
-				pointer-events: none;
-				transition: color 0.3s ease;
-			}
-			
-			.form-control-modern {
+			.form-control {
 				width: 100%;
-				padding: 12px 14px 12px 44px;
+				height: 50px;
+				padding: 0 50px 0 18px;
 				border: 2px solid #e2e8f0;
-				border-radius: 10px;
+				border-radius: 12px;
 				font-size: 14px;
 				color: #1e293b;
 				transition: all 0.3s ease;
 				background: #f8fafc;
 			}
 			
-			.form-control-modern:focus {
+			.form-control:focus {
 				outline: none;
 				border-color: #667eea;
 				background: #ffffff;
 				box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 			}
 			
-			.form-control-modern:focus + .input-icon {
-				color: #667eea;
+			.form-control:hover {
+				border-color: #cbd5e1;
+				background: #ffffff;
 			}
 			
-			.form-control-modern::placeholder {
+			.form-control::placeholder {
 				color: #94a3b8;
 			}
 			
 			/* Toggle Password Visibility */
 			.toggle-password {
 				position: absolute;
-				right: 14px;
+				right: 18px;
 				top: 50%;
 				transform: translateY(-50%);
 				color: #94a3b8;
@@ -301,44 +265,45 @@ $_SESSION['msg1']="Old Password not match !!";
 				color: #667eea;
 			}
 			
-			/* Buttons - Compact */
-			.btn-submit-modern {
-				display: inline-flex;
+			/* Submit Button */
+			.btn-submit {
+				display: flex;
 				align-items: center;
 				justify-content: center;
-				gap: 8px;
-				padding: 14px 32px;
+				gap: 10px;
+				width: 100%;
+				height: 52px;
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 				color: #ffffff;
 				border: none;
-				border-radius: 10px;
+				border-radius: 12px;
 				font-size: 15px;
 				font-weight: 700;
 				cursor: pointer;
 				transition: all 0.3s ease;
 				box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
-				width: 100%;
+				margin-top: 28px;
 			}
 			
-			.btn-submit-modern:hover {
+			.btn-submit:hover {
 				transform: translateY(-2px);
 				box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 			}
 			
-			.btn-submit-modern:active {
+			.btn-submit:active {
 				transform: translateY(0);
 			}
 			
-			.btn-submit-modern i {
+			.btn-submit i {
 				font-size: 16px;
 			}
 			
-			/* Security Tips - Compact */
+			/* Security Tips */
 			.security-tips {
 				background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 				border-left: 4px solid #f59e0b;
 				border-radius: 12px;
-				padding: 18px;
+				padding: 18px 20px;
 				margin-top: 24px;
 			}
 			
@@ -363,30 +328,14 @@ $_SESSION['msg1']="Old Password not match !!";
 			}
 			
 			.security-tips li {
-				margin-bottom: 5px;
+				margin-bottom: 6px;
 				font-size: 13px;
 				font-weight: 500;
+				line-height: 1.5;
 			}
 			
-			/* Responsive */
-			@media (max-width: 768px) {
-				.main-content {
-					padding: 20px 16px;
-				}
-				
-				.page-header-modern {
-					padding: 30px 24px;
-					border-radius: 16px;
-				}
-				
-				.page-header-modern h1 {
-					font-size: 28px;
-				}
-				
-				.form-card-modern {
-					padding: 24px;
-					border-radius: 16px;
-				}
+			.security-tips li:last-child {
+				margin-bottom: 0;
 			}
 			
 			/* Container Overrides */
@@ -395,20 +344,25 @@ $_SESSION['msg1']="Old Password not match !!";
 				padding: 0;
 			}
 			
-			.wrap-content {
-				max-width: 650px;
-				margin: 0 auto;
-				padding-bottom: 40px;
-			}
-			
-			/* Footer spacing fix */
-			.main-content {
-				min-height: calc(100vh - 200px);
-			}
-			
-			/* Remove old styles */
-			#page-title {
-				display: none;
+			/* Responsive */
+			@media (max-width: 768px) {
+				.wrap-content {
+					padding: 24px 16px;
+				}
+				
+				#page-title .mainTitle {
+					font-size: 28px;
+				}
+				
+				.form-card {
+					padding: 24px 20px;
+					border-radius: 16px;
+				}
+				
+				.form-header {
+					flex-direction: column;
+					align-items: flex-start;
+				}
 			}
 		</style>
 
@@ -468,24 +422,36 @@ function togglePassword(inputId, iconElement) {
 				<div class="main-content">
 					<div class="wrap-content container" id="container">
 						
-						<!-- Modern Page Header -->
-						<div class="page-header-modern">
-							<h1>
-								<i class="fas fa-shield-alt"></i>
-								Change Password
-							</h1>
-							<p>Update your account password to keep your account secure</p>
-						</div>
+						<!-- Simple Page Title -->
+						<section id="page-title">
+							<div class="row">
+								<div class="col-sm-8">
+									<h1 class="mainTitle">Change Password</h1>
+								</div>
+								<ol class="breadcrumb">
+									<li>
+										<span>Admin</span>
+									</li>
+									<li class="active">
+										<span>Change Password</span>
+									</li>
+								</ol>
+							</div>
+						</section>
 						
-						<!-- Form Card -->
-						<div class="form-card-modern">
+						<!-- Form Section -->
+						<div class="container-fluid container-fullw bg-white">
+							<div class="row">
+								<div class="col-md-12">
+									
+									<div class="form-card">
 										<div class="form-header">
 											<div class="form-icon-badge">
 												<i class="fas fa-key"></i>
 											</div>
-											<div>
-												<h2 class="form-title">Update Password</h2>
-												<p class="form-subtitle">Enter your current password and choose a new one</p>
+											<div class="form-header-content">
+												<h2>Update Password</h2>
+												<p>Enter your current password and choose a new one</p>
 											</div>
 										</div>
 										
@@ -506,8 +472,8 @@ function togglePassword(inputId, iconElement) {
 										<form role="form" name="chngpwd" method="post" onSubmit="return valid();">
 											
 											<!-- Current Password -->
-											<div class="form-group-modern">
-												<label class="form-label-modern">
+											<div class="form-group">
+												<label for="currentPassword">
 													<i class="fas fa-lock"></i>
 													Current Password
 												</label>
@@ -515,17 +481,16 @@ function togglePassword(inputId, iconElement) {
 													<input type="password" 
 														   id="currentPassword"
 														   name="cpass" 
-														   class="form-control-modern" 
+														   class="form-control" 
 														   placeholder="Enter your current password">
-													<i class="fas fa-lock input-icon"></i>
 													<i class="fas fa-eye toggle-password" 
 													   onclick="togglePassword('currentPassword', this)"></i>
 												</div>
 											</div>
 											
 											<!-- New Password -->
-											<div class="form-group-modern">
-												<label class="form-label-modern">
+											<div class="form-group">
+												<label for="newPassword">
 													<i class="fas fa-key"></i>
 													New Password
 												</label>
@@ -533,17 +498,16 @@ function togglePassword(inputId, iconElement) {
 													<input type="password" 
 														   id="newPassword"
 														   name="npass" 
-														   class="form-control-modern" 
+														   class="form-control" 
 														   placeholder="Enter your new password">
-													<i class="fas fa-key input-icon"></i>
 													<i class="fas fa-eye toggle-password" 
 													   onclick="togglePassword('newPassword', this)"></i>
 												</div>
 											</div>
 											
 											<!-- Confirm Password -->
-											<div class="form-group-modern">
-												<label class="form-label-modern">
+											<div class="form-group">
+												<label for="confirmPassword">
 													<i class="fas fa-check-circle"></i>
 													Confirm New Password
 												</label>
@@ -551,16 +515,15 @@ function togglePassword(inputId, iconElement) {
 													<input type="password" 
 														   id="confirmPassword"
 														   name="cfpass" 
-														   class="form-control-modern" 
+														   class="form-control" 
 														   placeholder="Re-enter your new password">
-													<i class="fas fa-check-circle input-icon"></i>
 													<i class="fas fa-eye toggle-password" 
 													   onclick="togglePassword('confirmPassword', this)"></i>
 												</div>
 											</div>
 											
 											<!-- Submit Button -->
-											<button type="submit" name="submit" class="btn-submit-modern">
+											<button type="submit" name="submit" class="btn-submit">
 												<i class="fas fa-shield-alt"></i>
 												Update Password
 											</button>
@@ -582,17 +545,15 @@ function togglePassword(inputId, iconElement) {
 										</div>
 										
 									</div>
-									<!-- End Form Card -->
 									
 								</div>
 							</div>
 						</div>
+						
+					</div>
 				</div>
 			</div>
-			
-			<!-- Footer -->
-			<?php include('include/footer.php');?>
-			
+						
 			<!-- Settings -->
 			<?php include('include/setting.php');?>
 		</div>
@@ -604,25 +565,11 @@ function togglePassword(inputId, iconElement) {
 		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
 		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 		<script src="vendor/switchery/switchery.min.js"></script>
-		
-		<!-- Page Specific JavaScripts -->
-		<script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
-		<script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-		<script src="vendor/autosize/autosize.min.js"></script>
-		<script src="vendor/selectFx/classie.js"></script>
-		<script src="vendor/selectFx/selectFx.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
-		<script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-		<script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-		
-		<!-- Theme JavaScripts -->
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/form-elements.js"></script>
 		
 		<script>
 			jQuery(document).ready(function() {
 				Main.init();
-				FormElements.init();
 			});
 		</script>
 	</body>
