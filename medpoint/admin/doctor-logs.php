@@ -49,58 +49,21 @@ if(strlen($_SESSION['id']==0)) {
 				padding: 35px 40px;
 			}
 			
-			/* Modern Page Header */
-			.page-header-modern {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				border-radius: 20px;
-				padding: 30px 40px;
+			/* Dashboard Style Title */
+			.dashboard-title {
 				margin-bottom: 35px;
-				color: #ffffff;
-				box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
-				position: relative;
-				overflow: hidden;
 			}
 			
-			.page-header-modern::before {
-				content: '';
-				position: absolute;
-				top: -50%;
-				right: -20%;
-				width: 350px;
-				height: 350px;
-				background: rgba(255, 255, 255, 0.06);
-				border-radius: 50%;
-				pointer-events: none;
-			}
-			
-			.page-header-modern h1 {
-				font-size: 28px;
-				font-weight: 700;
-				margin-bottom: 6px;
-				display: flex;
-				align-items: center;
-				gap: 12px;
-				position: relative;
-				z-index: 1;
-				letter-spacing: -0.5px;
-				color: #ffffff !important;
-				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-			}
-			
-			.page-header-modern h1 i {
-				color: #ffffff !important;
-				filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-				font-size: 24px;
-			}
-			
-			.page-header-modern p {
-				font-size: 14px;
-				opacity: 1;
-				color: rgba(255, 255, 255, 0.95);
+			.dashboard-title h1 {
+				font-size: 48px;
+				font-weight: 800;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
 				margin: 0;
-				position: relative;
-				z-index: 1;
-				font-weight: 500;
+				letter-spacing: 1px;
+				text-transform: uppercase;
 			}
 			
 			/* Table Card */
@@ -333,13 +296,8 @@ if(strlen($_SESSION['id']==0)) {
 					padding: 20px 16px;
 				}
 				
-				.page-header-modern {
-					padding: 24px;
-					border-radius: 16px;
-				}
-				
-				.page-header-modern h1 {
-					font-size: 24px;
+				.dashboard-title h1 {
+					font-size: 36px;
 				}
 				
 				.table-card-glass {
@@ -370,11 +328,6 @@ if(strlen($_SESSION['id']==0)) {
 				background: transparent;
 				padding: 0;
 			}
-			
-			/* Remove old styles */
-			#page-title {
-				display: none;
-			}
 		</style>
 	</head>
 	<body>
@@ -387,13 +340,9 @@ if(strlen($_SESSION['id']==0)) {
 				<div class="main-content">
 					<div class="wrap-content container" id="container">
 						
-						<!-- Modern Page Header -->
-						<div class="page-header-modern">
-							<h1>
-								<i class="fas fa-user-clock"></i>
-								Doctor Session Logs
-							</h1>
-							<p>Monitor doctor login and logout activities</p>
+						<!-- Dashboard Style Title -->
+						<div class="dashboard-title">
+							<h1>DOCTOR SESSION LOGS</h1>
 						</div>
 						
 						<div class="container-fluid container-fullw bg-white">

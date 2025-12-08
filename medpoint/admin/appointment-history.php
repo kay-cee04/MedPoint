@@ -51,171 +51,168 @@ if(strlen($_SESSION['id']) == 0) {
         
         .main-content {
             background: #f0f4f8;
-            padding: 35px 40px;
         }
         
-        /* Modern Page Header */
-        .page-header-modern {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 24px;
-            padding: 45px 50px;
-            margin-bottom: 40px;
-            color: #ffffff;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
-            position: relative;
-            overflow: hidden;
+        .wrap-content {
+            padding: 40px 30px;
         }
         
-        .page-header-modern::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 400px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+        /* Simple Page Title - Like Dashboard */
+        #page-title {
+            background: transparent;
+            padding: 0 0 40px 0;
+            border: none;
         }
         
-        .page-header-modern h1 {
+        #page-title .mainTitle {
             font-size: 36px;
             font-weight: 800;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            position: relative;
-            z-index: 1;
-            letter-spacing: -0.5px;
-        }
-        
-        .page-header-modern p {
-            font-size: 16px;
-            opacity: 0.95;
-            margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .breadcrumb-modern {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 12px 24px;
-            border-radius: 30px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            position: relative;
-            z-index: 1;
-            margin-top: 20px;
-        }
-        
-        .breadcrumb-modern span {
-            color: rgba(255, 255, 255, 0.85);
-            font-weight: 500;
-        }
-        
-        .breadcrumb-modern .active {
-            color: #ffffff;
-            font-weight: 700;
-        }
-        
-        .breadcrumb-modern i {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 12px;
-        }
-        
-        /* Glass Table Card */
-        .table-card-glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 35px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            transition: all 0.4s ease;
-        }
-        
-        .table-card-glass:hover {
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-        }
-        
-        .card-header-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        
-        .card-header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .card-icon-badge {
-            width: 56px;
-            height: 56px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-        
-        .card-icon-badge i {
-            color: #ffffff;
-            font-size: 24px;
-        }
-        
-        .card-title-main {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0f172a;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin: 0;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
         
-        .card-subtitle {
+        #page-title .breadcrumb {
+            background: transparent;
+            padding: 12px 0;
+            margin: 12px 0 0 0;
             font-size: 14px;
+        }
+        
+        #page-title .breadcrumb li {
             color: #64748b;
-            margin: 5px 0 0 0;
+            font-weight: 400;
+        }
+        
+        #page-title .breadcrumb li.active {
+            color: #334155;
+            font-weight: 600;
         }
         
         /* Stats Summary */
         .stats-summary {
             display: flex;
-            gap: 15px;
+            gap: 20px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
         }
         
-        .stat-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-size: 13px;
-            font-weight: 600;
+        .stat-card {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
         }
         
-        .stat-badge.total {
-            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card.total {
+            border-left: 4px solid #667eea;
+        }
+        
+        .stat-card.active {
+            border-left: 4px solid #10b981;
+        }
+        
+        .stat-card.cancelled {
+            border-left: 4px solid #ef4444;
+        }
+        
+        .stat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #64748b;
+        }
+        
+        .stat-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stat-card.total .stat-icon {
+            background: rgba(102, 126, 234, 0.1);
             color: #667eea;
         }
         
-        .stat-badge.active {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            color: #059669;
+        .stat-card.active .stat-icon {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
         }
         
-        .stat-badge.cancelled {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
-            color: #dc2626;
+        .stat-card.cancelled .stat-icon {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1;
+        }
+        
+        /* Table Card - Simple White Background */
+        .table-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        
+        .table-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .table-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .table-icon i {
+            color: #ffffff;
+            font-size: 20px;
+        }
+        
+        .table-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0;
         }
         
         /* Modern Table */
@@ -223,15 +220,14 @@ if(strlen($_SESSION['id']) == 0) {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            table-layout: fixed;
         }
         
         .table-modern thead {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            background: #f8fafc;
         }
         
         .table-modern thead th {
-            padding: 18px 12px;
+            padding: 16px 12px;
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
@@ -240,45 +236,11 @@ if(strlen($_SESSION['id']) == 0) {
             border-bottom: 2px solid #e2e8f0;
             text-align: left;
             white-space: nowrap;
-            vertical-align: middle;
         }
         
         .table-modern thead th:first-child {
             border-radius: 12px 0 0 0;
-            width: 50px;
             text-align: center;
-        }
-        
-        .table-modern thead th:nth-child(2) {
-            width: 12%;
-        }
-        
-        .table-modern thead th:nth-child(3) {
-            width: 12%;
-        }
-        
-        .table-modern thead th:nth-child(4) {
-            width: 13%;
-        }
-        
-        .table-modern thead th:nth-child(5) {
-            width: 8%;
-        }
-        
-        .table-modern thead th:nth-child(6) {
-            width: 13%;
-        }
-        
-        .table-modern thead th:nth-child(7) {
-            width: 11%;
-        }
-        
-        .table-modern thead th:nth-child(8) {
-            width: 13%;
-        }
-        
-        .table-modern thead th:nth-child(9) {
-            width: 13%;
         }
         
         .table-modern thead th:last-child {
@@ -286,36 +248,23 @@ if(strlen($_SESSION['id']) == 0) {
         }
         
         .table-modern tbody tr {
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             border-bottom: 1px solid #f1f5f9;
         }
         
         .table-modern tbody tr:hover {
-            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
-            transform: scale(1.002);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+            background: #faf5ff;
         }
         
         .table-modern tbody td {
-            padding: 18px 12px;
+            padding: 16px 12px;
             font-size: 14px;
             color: #334155;
             vertical-align: middle;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         
         .table-modern tbody td:first-child {
             text-align: center;
-            width: 50px;
-        }
-        
-        .table-modern tbody tr:last-child td:first-child {
-            border-radius: 0 0 0 12px;
-        }
-        
-        .table-modern tbody tr:last-child td:last-child {
-            border-radius: 0 0 12px 0;
         }
         
         /* Table Cell Styles */
@@ -323,37 +272,11 @@ if(strlen($_SESSION['id']) == 0) {
             font-weight: 700;
             color: #667eea;
             font-size: 15px;
-            text-align: center;
         }
         
         .cell-name {
             font-weight: 600;
             color: #0f172a;
-            white-space: normal;
-            word-wrap: break-word;
-        }
-        
-        .cell-content {
-            display: block;
-            width: 100%;
-            white-space: normal;
-            word-wrap: break-word;
-        }
-        
-        .cell-icon {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .cell-icon i {
-            color: #94a3b8;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-        
-        .date-time-cell {
-            white-space: nowrap;
         }
         
         .date-time-cell small {
@@ -378,18 +301,22 @@ if(strlen($_SESSION['id']) == 0) {
         }
         
         .status-badge.active {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            background: #d1fae5;
             color: #059669;
         }
         
         .status-badge.cancelled-patient {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            background: #fee2e2;
             color: #dc2626;
         }
         
         .status-badge.cancelled-doctor {
-            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+            background: #fed7aa;
             color: #c2410c;
+        }
+        
+        .status-badge i {
+            font-size: 10px;
         }
         
         /* Action Text */
@@ -399,7 +326,6 @@ if(strlen($_SESSION['id']) == 0) {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            white-space: nowrap;
         }
         
         .action-text.no-action {
@@ -410,17 +336,13 @@ if(strlen($_SESSION['id']) == 0) {
             color: #ef4444;
         }
         
-        .action-text i {
-            font-size: 12px;
-        }
-        
         /* Alert Message */
         .alert-message {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            background: #fef3c7;
             border-left: 4px solid #f59e0b;
             border-radius: 12px;
             padding: 16px 20px;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             color: #92400e;
             font-weight: 600;
             display: flex;
@@ -435,9 +357,9 @@ if(strlen($_SESSION['id']) == 0) {
         }
         
         .empty-state-icon {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            width: 100px;
+            height: 100px;
+            background: #f1f5f9;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -446,15 +368,15 @@ if(strlen($_SESSION['id']) == 0) {
         }
         
         .empty-state-icon i {
-            font-size: 48px;
+            font-size: 40px;
             color: #94a3b8;
         }
         
         .empty-state-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: #334155;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .empty-state-text {
@@ -462,35 +384,28 @@ if(strlen($_SESSION['id']) == 0) {
             color: #64748b;
         }
         
-        /* Responsive */
-        @media (max-width: 992px) {
-            .card-header-section {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-            
-            .stats-summary {
-                width: 100%;
-            }
+        /* Container Overrides */
+        .container-fluid.container-fullw {
+            background: transparent;
+            padding: 0;
         }
         
+        /* Responsive */
         @media (max-width: 768px) {
-            .main-content {
-                padding: 20px 16px;
+            .wrap-content {
+                padding: 24px 16px;
             }
             
-            .page-header-modern {
-                padding: 30px 24px;
-                border-radius: 16px;
-            }
-            
-            .page-header-modern h1 {
+            #page-title .mainTitle {
                 font-size: 28px;
             }
             
-            .table-card-glass {
-                padding: 20px;
+            .stats-summary {
+                flex-direction: column;
+            }
+            
+            .stat-card {
+                min-width: 100%;
             }
             
             .table-wrapper {
@@ -499,14 +414,8 @@ if(strlen($_SESSION['id']) == 0) {
             }
             
             .table-modern {
-                min-width: 1200px;
+                min-width: 1000px;
             }
-        }
-        
-        /* Container Overrides */
-        .container-fluid.container-fullw {
-            background: transparent;
-            padding: 0;
         }
     </style>
 </head>
@@ -520,19 +429,85 @@ if(strlen($_SESSION['id']) == 0) {
             <div class="main-content">
                 <div class="wrap-content container" id="container">
                     
-                    <!-- Modern Page Header -->
-                    <div class="page-header-modern">
-                        <h1>
-                            <i class="fas fa-calendar-check"></i>
-                            Appointment History
-                        </h1>
-                        <p>View and manage all patient appointments</p>
-                        <div class="breadcrumb-modern">
-                            <span>Admin</span>
-                            <i class="fas fa-chevron-right"></i>
-                            <span>Patients</span>
-                            <i class="fas fa-chevron-right"></i>
-                            <span class="active">Appointment History</span>
+                    <!-- Simple Page Title - Like Dashboard -->
+                    <section id="page-title">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h1 class="mainTitle">Appointment History</h1>
+                            </div>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <span>Admin</span>
+                                </li>
+                                <li class="active">
+                                    <span>Appointment History</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    
+                    <!-- Stats Summary Cards -->
+                    <div class="stats-summary">
+                        <?php 
+                        // Count statistics
+                        $total_query = mysqli_query($con, "
+                            SELECT COUNT(*) as total 
+                            FROM appointment 
+                            JOIN doctors ON doctors.id = appointment.doctorId 
+                            JOIN users ON users.id = appointment.userId
+                        ");
+                        $total_row = mysqli_fetch_assoc($total_query);
+                        $total = $total_row['total'];
+                        
+                        $active_query = mysqli_query($con, "
+                            SELECT COUNT(*) as active 
+                            FROM appointment 
+                            JOIN doctors ON doctors.id = appointment.doctorId 
+                            JOIN users ON users.id = appointment.userId
+                            WHERE appointment.userStatus=1 AND appointment.doctorStatus=1
+                        ");
+                        $active_row = mysqli_fetch_assoc($active_query);
+                        $active = $active_row['active'];
+                        
+                        $cancelled_query = mysqli_query($con, "
+                            SELECT COUNT(*) as cancelled 
+                            FROM appointment 
+                            JOIN doctors ON doctors.id = appointment.doctorId 
+                            JOIN users ON users.id = appointment.userId
+                            WHERE appointment.userStatus=0 OR appointment.doctorStatus=0
+                        ");
+                        $cancelled_row = mysqli_fetch_assoc($cancelled_query);
+                        $cancelled = $cancelled_row['cancelled'];
+                        ?>
+                        
+                        <div class="stat-card total">
+                            <div class="stat-header">
+                                <span class="stat-label">Total Appointments</span>
+                                <div class="stat-icon">
+                                    <i class="fas fa-list"></i>
+                                </div>
+                            </div>
+                            <div class="stat-value"><?php echo $total; ?></div>
+                        </div>
+                        
+                        <div class="stat-card active">
+                            <div class="stat-header">
+                                <span class="stat-label">Active</span>
+                                <div class="stat-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="stat-value"><?php echo $active; ?></div>
+                        </div>
+                        
+                        <div class="stat-card cancelled">
+                            <div class="stat-header">
+                                <span class="stat-label">Cancelled</span>
+                                <div class="stat-icon">
+                                    <i class="fas fa-times-circle"></i>
+                                </div>
+                            </div>
+                            <div class="stat-value"><?php echo $cancelled; ?></div>
                         </div>
                     </div>
                     
@@ -548,69 +523,19 @@ if(strlen($_SESSION['id']) == 0) {
                                 </div>
                                 <?php endif; ?>
                                 
-                                <div class="table-card-glass">
-                                    <div class="card-header-section">
-                                        <div class="card-header-left">
-                                            <div class="card-icon-badge">
-                                                <i class="fas fa-clipboard-list"></i>
-                                            </div>
-                                            <div>
-                                                <h2 class="card-title-main">All Appointments</h2>
-                                                <p class="card-subtitle">Complete appointment records</p>
-                                            </div>
+                                <div class="table-card">
+                                    <div class="table-header">
+                                        <div class="table-icon">
+                                            <i class="fas fa-clipboard-list"></i>
                                         </div>
-                                        <div class="stats-summary">
-                                            <?php 
-                                            // Count only appointments that have valid doctor and user records (matching the main query)
-                                            $total_query = mysqli_query($con, "
-                                                SELECT COUNT(*) as total 
-                                                FROM appointment 
-                                                JOIN doctors ON doctors.id = appointment.doctorId 
-                                                JOIN users ON users.id = appointment.userId
-                                            ");
-                                            $total_row = mysqli_fetch_assoc($total_query);
-                                            $total = $total_row['total'];
-                                            
-                                            $active_query = mysqli_query($con, "
-                                                SELECT COUNT(*) as active 
-                                                FROM appointment 
-                                                JOIN doctors ON doctors.id = appointment.doctorId 
-                                                JOIN users ON users.id = appointment.userId
-                                                WHERE appointment.userStatus=1 AND appointment.doctorStatus=1
-                                            ");
-                                            $active_row = mysqli_fetch_assoc($active_query);
-                                            $active = $active_row['active'];
-                                            
-                                            $cancelled_query = mysqli_query($con, "
-                                                SELECT COUNT(*) as cancelled 
-                                                FROM appointment 
-                                                JOIN doctors ON doctors.id = appointment.doctorId 
-                                                JOIN users ON users.id = appointment.userId
-                                                WHERE appointment.userStatus=0 OR appointment.doctorStatus=0
-                                            ");
-                                            $cancelled_row = mysqli_fetch_assoc($cancelled_query);
-                                            $cancelled = $cancelled_row['cancelled'];
-                                            ?>
-                                            <div class="stat-badge total">
-                                                <i class="fas fa-list"></i>
-                                                Total: <?php echo $total; ?>
-                                            </div>
-                                            <div class="stat-badge active">
-                                                <i class="fas fa-check-circle"></i>
-                                                Active: <?php echo $active; ?>
-                                            </div>
-                                            <div class="stat-badge cancelled">
-                                                <i class="fas fa-times-circle"></i>
-                                                Cancelled: <?php echo $cancelled; ?>
-                                            </div>
-                                        </div>
+                                        <h2 class="table-title">All Appointments</h2>
                                     </div>
                                     
                                     <div class="table-wrapper">
                                         <table class="table-modern">
                                             <thead>
                                                 <tr>
-                                                    <th style="text-align: center;">#</th>
+                                                    <th>#</th>
                                                     <th>DOCTOR</th>
                                                     <th>PATIENT</th>
                                                     <th>SPECIALIZATION</th>
@@ -648,36 +573,30 @@ if(strlen($_SESSION['id']) == 0) {
                                                     <td>
                                                         <div class="cell-name"><?php echo htmlentities($row['pname']); ?></div>
                                                     </td>
-                                                    <td>
-                                                        <div class="cell-content"><?php echo htmlentities($row['doctorSpecialization']); ?></div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="cell-content">$<?php echo number_format($row['consultancyFees'], 2); ?></div>
-                                                    </td>
+                                                    <td><?php echo htmlentities($row['doctorSpecialization']); ?></td>
+                                                    <td>$<?php echo number_format($row['consultancyFees'], 2); ?></td>
                                                     <td>
                                                         <div class="date-time-cell">
                                                             <div><?php echo date('M d, Y', strtotime($row['appointmentDate'])); ?></div>
                                                             <small><?php echo htmlentities($row['appointmentTime']); ?></small>
                                                         </div>
                                                     </td>
-                                                    <td>
-                                                        <div class="cell-content"><?php echo date('M d, Y', strtotime($row['postingDate'])); ?></div>
-                                                    </td>
+                                                    <td><?php echo date('M d, Y', strtotime($row['postingDate'])); ?></td>
                                                     <td>
                                                         <?php 
                                                         if($row['userStatus'] == 1 && $row['doctorStatus'] == 1) {
                                                             echo '<span class="status-badge active"><i class="fas fa-check-circle"></i> Active</span>';
                                                         } elseif($row['userStatus'] == 0 && $row['doctorStatus'] == 1) {
-                                                            echo '<span class="status-badge cancelled-patient"><i class="fas fa-user-xmark"></i> Cancel by Patient</span>';
+                                                            echo '<span class="status-badge cancelled-patient"><i class="fas fa-user-xmark"></i> Patient</span>';
                                                         } elseif($row['userStatus'] == 1 && $row['doctorStatus'] == 0) {
-                                                            echo '<span class="status-badge cancelled-doctor"><i class="fas fa-user-doctor-slash"></i> Cancel by Doctor</span>';
+                                                            echo '<span class="status-badge cancelled-doctor"><i class="fas fa-user-doctor"></i> Doctor</span>';
                                                         }
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                         if($row['userStatus'] == 1 && $row['doctorStatus'] == 1) {
-                                                            echo '<span class="action-text no-action"><i class="fas fa-hourglass-half"></i> No Action Yet</span>';
+                                                            echo '<span class="action-text no-action"><i class="fas fa-hourglass-half"></i> Pending</span>';
                                                         } else {
                                                             echo '<span class="action-text cancelled"><i class="fas fa-ban"></i> Cancelled</span>';
                                                         }
@@ -697,7 +616,7 @@ if(strlen($_SESSION['id']) == 0) {
                                                                 <i class="fas fa-calendar-xmark"></i>
                                                             </div>
                                                             <h3 class="empty-state-title">No Appointments Found</h3>
-                                                            <p class="empty-state-text">There are no appointment records to display at this time.</p>
+                                                            <p class="empty-state-text">There are no appointment records to display.</p>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -713,40 +632,23 @@ if(strlen($_SESSION['id']) == 0) {
                 </div>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <?php include('include/footer.php'); ?>
-        
+                
         <!-- Settings -->
         <?php include('include/setting.php'); ?>
     </div>
     
-    <!-- Main JavaScripts -->
+    <!-- JavaScripts -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/modernizr/modernizr.js"></script>
     <script src="vendor/jquery-cookie/jquery.cookie.js"></script>
     <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="vendor/switchery/switchery.min.js"></script>
-    
-    <!-- Page Specific JavaScripts -->
-    <script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
-    <script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-    <script src="vendor/autosize/autosize.min.js"></script>
-    <script src="vendor/selectFx/classie.js"></script>
-    <script src="vendor/selectFx/selectFx.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-    
-    <!-- Theme JavaScripts -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/form-elements.js"></script>
     
     <script>
         jQuery(document).ready(function() {
             Main.init();
-            FormElements.init();
         });
     </script>
 </body>

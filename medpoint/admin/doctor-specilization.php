@@ -59,121 +59,59 @@ $_SESSION['msg']="data deleted !!";
 			
 			.main-content {
 				background: #f0f4f8;
-				padding: 35px 40px;
 			}
 			
-			/* Modern Page Header */
-			.page-header-modern {
+			.wrap-content {
+				padding: 40px 30px;
+			}
+			
+			/* Simple Page Title - Like Dashboard */
+			#page-title {
+				background: transparent;
+				padding: 0 0 40px 0;
+				border: none;
+			}
+			
+			#page-title .mainTitle {
+				font-size: 36px;
+				font-weight: 800;
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				border-radius: 20px;
-				padding: 30px 40px;
-				margin-bottom: 35px;
-				color: #ffffff;
-				box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
-				position: relative;
-				overflow: hidden;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				margin: 0;
+				letter-spacing: -1px;
 			}
 			
-			.page-header-modern::before {
-				content: '';
-				position: absolute;
-				top: -50%;
-				right: -20%;
-				width: 350px;
-				height: 350px;
-				background: rgba(255, 255, 255, 0.06);
-				border-radius: 50%;
-				pointer-events: none;
-			}
-			
-			.page-header-modern h1 {
-				font-size: 28px;
-				font-weight: 700;
-				margin-bottom: 6px;
-				display: flex;
-				align-items: center;
-				gap: 12px;
-				position: relative;
-				z-index: 1;
-				letter-spacing: -0.5px;
-				color: #ffffff !important;
-				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-			}
-			
-			.page-header-modern h1 i {
-				color: #ffffff !important;
-				filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-				font-size: 24px;
-			}
-			
-			.page-header-modern p {
+			#page-title .breadcrumb {
+				background: transparent;
+				padding: 12px 0;
+				margin: 12px 0 0 0;
 				font-size: 14px;
-				opacity: 1;
-				color: rgba(255, 255, 255, 0.95);
-				margin: 0;
-				position: relative;
-				z-index: 1;
-				font-weight: 500;
 			}
 			
-			/* Form Card */
-			.form-card-modern {
-				background: #ffffff;
-				border-radius: 20px;
-				padding: 28px;
-				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-				border: 1px solid #e2e8f0;
-				transition: all 0.4s ease;
-				margin-bottom: 30px;
+			#page-title .breadcrumb li {
+				color: #64748b;
+				font-weight: 400;
 			}
 			
-			.form-card-modern:hover {
-				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+			#page-title .breadcrumb li.active {
+				color: #334155;
+				font-weight: 600;
 			}
 			
-			.form-header {
-				display: flex;
-				align-items: center;
-				gap: 14px;
-				margin-bottom: 20px;
-				padding-bottom: 18px;
-				border-bottom: 2px solid #e2e8f0;
-			}
-			
-			.form-icon-badge {
-				width: 44px;
-				height: 44px;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				border-radius: 12px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
-			}
-			
-			.form-icon-badge i {
-				color: #ffffff;
-				font-size: 18px;
-			}
-			
-			.form-title {
-				font-size: 18px;
-				font-weight: 700;
-				color: #0f172a;
-				margin: 0;
-			}
-			
-			/* Alert Messages */
-			.alert-modern {
+			/* Alert Message */
+			.alert-message {
+				background: #d1fae5;
+				border-left: 4px solid #10b981;
 				border-radius: 12px;
 				padding: 14px 18px;
-				margin-bottom: 20px;
-				border: none;
+				margin-bottom: 24px;
+				color: #065f46;
+				font-weight: 600;
 				display: flex;
 				align-items: center;
 				gap: 10px;
-				font-weight: 500;
-				font-size: 14px;
 				animation: slideDown 0.3s ease;
 			}
 			
@@ -188,17 +126,52 @@ $_SESSION['msg']="data deleted !!";
 				}
 			}
 			
-			.alert-success {
-				background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-				color: #065f46;
-				border-left: 4px solid #10b981;
-			}
-			
-			.alert-modern i {
+			.alert-message i {
 				font-size: 18px;
 			}
 			
-			/* Form Groups */
+			/* Form Card */
+			.form-card {
+				background: #ffffff;
+				border-radius: 16px;
+				padding: 30px;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+				margin-bottom: 30px;
+			}
+			
+			.form-header {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				margin-bottom: 24px;
+				padding-bottom: 18px;
+				border-bottom: 2px solid #e2e8f0;
+			}
+			
+			.form-icon {
+				width: 48px;
+				height: 48px;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+			}
+			
+			.form-icon i {
+				color: #ffffff;
+				font-size: 20px;
+			}
+			
+			.form-title {
+				font-size: 20px;
+				font-weight: 700;
+				color: #0f172a;
+				margin: 0;
+			}
+			
+			/* Form Input */
 			.form-group-modern {
 				margin-bottom: 20px;
 			}
@@ -229,8 +202,6 @@ $_SESSION['msg']="data deleted !!";
 				transform: translateY(-50%);
 				color: #94a3b8;
 				font-size: 16px;
-				pointer-events: none;
-				transition: color 0.3s ease;
 			}
 			
 			.form-control-modern {
@@ -255,17 +226,12 @@ $_SESSION['msg']="data deleted !!";
 				color: #667eea;
 			}
 			
-			.form-control-modern::placeholder {
-				color: #94a3b8;
-			}
-			
 			/* Submit Button */
-			.btn-submit-modern {
+			.btn-submit {
 				display: inline-flex;
 				align-items: center;
-				justify-content: center;
 				gap: 8px;
-				padding: 12px 28px;
+				padding: 12px 24px;
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 				color: #ffffff;
 				border: none;
@@ -274,33 +240,23 @@ $_SESSION['msg']="data deleted !!";
 				font-weight: 700;
 				cursor: pointer;
 				transition: all 0.3s ease;
-				box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+				box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 			}
 			
-			.btn-submit-modern:hover {
+			.btn-submit:hover {
 				transform: translateY(-2px);
-				box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-			}
-			
-			.btn-submit-modern i {
-				font-size: 14px;
+				box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
 			}
 			
 			/* Table Card */
-			.table-card-glass {
+			.table-card {
 				background: #ffffff;
-				border-radius: 20px;
-				padding: 28px;
-				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-				border: 1px solid #e2e8f0;
-				transition: all 0.4s ease;
+				border-radius: 16px;
+				padding: 30px;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 			}
 			
-			.table-card-glass:hover {
-				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-			}
-			
-			.card-header-section {
+			.table-header {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
@@ -309,43 +265,41 @@ $_SESSION['msg']="data deleted !!";
 				border-bottom: 2px solid #e2e8f0;
 			}
 			
-			.card-header-left {
+			.table-header-left {
 				display: flex;
 				align-items: center;
-				gap: 14px;
+				gap: 12px;
 			}
 			
-			.card-icon-badge {
-				width: 44px;
-				height: 44px;
+			.table-icon {
+				width: 48px;
+				height: 48px;
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 				border-radius: 12px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+				box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 			}
 			
-			.card-icon-badge i {
+			.table-icon i {
 				color: #ffffff;
-				font-size: 18px;
+				font-size: 20px;
 			}
 			
-			.card-title-main {
-				font-size: 18px;
+			.table-title {
+				font-size: 20px;
 				font-weight: 700;
 				color: #0f172a;
 				margin: 0;
 			}
 			
-			.card-subtitle {
+			.table-subtitle {
 				font-size: 12px;
 				color: #64748b;
 				margin: 4px 0 0 0;
-				font-weight: 500;
 			}
 			
-			/* Stats Badge */
 			.stat-badge {
 				display: flex;
 				align-items: center;
@@ -356,7 +310,6 @@ $_SESSION['msg']="data deleted !!";
 				font-weight: 700;
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 				color: #ffffff;
-				box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 			}
 			
 			/* Modern Table */
@@ -367,7 +320,7 @@ $_SESSION['msg']="data deleted !!";
 			}
 			
 			.table-modern thead {
-				background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+				background: #f8fafc;
 			}
 			
 			.table-modern thead th {
@@ -379,14 +332,11 @@ $_SESSION['msg']="data deleted !!";
 				letter-spacing: 0.5px;
 				border-bottom: 2px solid #e2e8f0;
 				text-align: left;
-				white-space: nowrap;
-				vertical-align: middle;
 			}
 			
 			.table-modern thead th:first-child {
 				border-radius: 12px 0 0 0;
 				text-align: center;
-				width: 60px;
 			}
 			
 			.table-modern thead th:last-child {
@@ -395,14 +345,12 @@ $_SESSION['msg']="data deleted !!";
 			}
 			
 			.table-modern tbody tr {
-				transition: all 0.3s ease;
+				transition: all 0.2s ease;
 				border-bottom: 1px solid #f1f5f9;
 			}
 			
 			.table-modern tbody tr:hover {
-				background: linear-gradient(135deg, #f8faff 0%, #f1f5ff 100%);
-				transform: scale(1.001);
-				box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+				background: #faf5ff;
 			}
 			
 			.table-modern tbody td {
@@ -420,26 +368,10 @@ $_SESSION['msg']="data deleted !!";
 				text-align: center;
 			}
 			
-			.table-modern tbody tr:last-child td:first-child {
-				border-radius: 0 0 0 12px;
-			}
-			
-			.table-modern tbody tr:last-child td:last-child {
-				border-radius: 0 0 12px 0;
-			}
-			
-			/* Cell Styles */
 			.cell-number {
 				font-weight: 700;
 				color: #667eea;
 				font-size: 14px;
-			}
-			
-			.cell-content {
-				display: block;
-				width: 100%;
-				color: #475569;
-				font-weight: 500;
 			}
 			
 			.cell-specialization {
@@ -463,31 +395,25 @@ $_SESSION['msg']="data deleted !!";
 			}
 			
 			.btn-edit {
-				background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+				background: #dbeafe;
 				color: #1e40af;
 			}
 			
 			.btn-edit:hover {
-				background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+				background: #3b82f6;
 				color: #ffffff;
 				transform: translateY(-2px);
-				box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 			}
 			
 			.btn-delete {
-				background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+				background: #fee2e2;
 				color: #991b1b;
 			}
 			
 			.btn-delete:hover {
-				background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+				background: #ef4444;
 				color: #ffffff;
 				transform: translateY(-2px);
-				box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-			}
-			
-			.btn-action i {
-				font-size: 13px;
 			}
 			
 			/* Empty State */
@@ -497,9 +423,9 @@ $_SESSION['msg']="data deleted !!";
 			}
 			
 			.empty-state-icon {
-				width: 90px;
-				height: 90px;
-				background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+				width: 80px;
+				height: 80px;
+				background: #f1f5f9;
 				border-radius: 50%;
 				display: flex;
 				align-items: center;
@@ -508,7 +434,7 @@ $_SESSION['msg']="data deleted !!";
 			}
 			
 			.empty-state-icon i {
-				font-size: 36px;
+				font-size: 32px;
 				color: #94a3b8;
 			}
 			
@@ -524,28 +450,28 @@ $_SESSION['msg']="data deleted !!";
 				color: #64748b;
 			}
 			
+			/* Container Overrides */
+			.container-fluid.container-fullw {
+				background: transparent;
+				padding: 0;
+			}
+			
 			/* Responsive */
 			@media (max-width: 768px) {
-				.main-content {
-					padding: 20px 16px;
+				.wrap-content {
+					padding: 24px 16px;
 				}
 				
-				.page-header-modern {
-					padding: 24px;
-					border-radius: 16px;
+				#page-title .mainTitle {
+					font-size: 28px;
 				}
 				
-				.page-header-modern h1 {
-					font-size: 24px;
+				.form-card,
+				.table-card {
+					padding: 24px 20px;
 				}
 				
-				.form-card-modern,
-				.table-card-glass {
-					padding: 20px;
-					border-radius: 16px;
-				}
-				
-				.card-header-section {
+				.table-header {
 					flex-direction: column;
 					align-items: flex-start;
 					gap: 12px;
@@ -554,24 +480,11 @@ $_SESSION['msg']="data deleted !!";
 				.table-wrapper {
 					overflow-x: auto;
 					-webkit-overflow-scrolling: touch;
-					margin: 0 -20px;
-					padding: 0 20px;
 				}
 				
 				.table-modern {
 					min-width: 700px;
 				}
-			}
-			
-			/* Container Overrides */
-			.container-fluid.container-fullw {
-				background: transparent;
-				padding: 0;
-			}
-			
-			/* Remove old styles */
-			#page-title {
-				display: none;
 			}
 		</style>
 	</head>
@@ -585,34 +498,43 @@ $_SESSION['msg']="data deleted !!";
 				<div class="main-content">
 					<div class="wrap-content container" id="container">
 						
-						<!-- Modern Page Header -->
-						<div class="page-header-modern">
-							<h1>
-								<i class="fas fa-stethoscope"></i>
-								Doctor Specializations
-							</h1>
-							<p>Manage medical specializations for doctors</p>
+						<!-- Simple Page Title -->
+						<section id="page-title">
+							<div class="row">
+								<div class="col-sm-8">
+									<h1 class="mainTitle">Doctor Specializations</h1>
+								</div>
+								<ol class="breadcrumb">
+									<li>
+										<span>Admin</span>
+									</li>
+									<li>
+										<span>Doctors</span>
+									</li>
+									<li class="active">
+										<span>Specializations</span>
+									</li>
+								</ol>
+							</div>
+						</section>
+						
+						<!-- Alert Message -->
+						<?php if(!empty($_SESSION['msg'])): ?>
+						<div class="alert-message">
+							<i class="fas fa-check-circle"></i>
+							<span><?php echo htmlentities($_SESSION['msg']); ?></span>
 						</div>
+						<?php $_SESSION['msg']=""; ?>
+						<?php endif; ?>
 						
 						<!-- Add Specialization Form -->
-						<div class="form-card-modern">
+						<div class="form-card">
 							<div class="form-header">
-								<div class="form-icon-badge">
+								<div class="form-icon">
 									<i class="fas fa-plus-circle"></i>
 								</div>
-								<div>
-									<h2 class="form-title">Add New Specialization</h2>
-								</div>
+								<h2 class="form-title">Add New Specialization</h2>
 							</div>
-							
-							<!-- Alert Message -->
-							<?php if(!empty($_SESSION['msg'])): ?>
-							<div class="alert-modern alert-success">
-								<i class="fas fa-check-circle"></i>
-								<span><?php echo htmlentities($_SESSION['msg']); ?></span>
-							</div>
-							<?php $_SESSION['msg']=""; ?>
-							<?php endif; ?>
 							
 							<form role="form" name="dcotorspcl" method="post">
 								<div class="form-group-modern">
@@ -630,7 +552,7 @@ $_SESSION['msg']="data deleted !!";
 									</div>
 								</div>
 								
-								<button type="submit" name="submit" class="btn-submit-modern">
+								<button type="submit" name="submit" class="btn-submit">
 									<i class="fas fa-plus"></i>
 									Add Specialization
 								</button>
@@ -638,15 +560,15 @@ $_SESSION['msg']="data deleted !!";
 						</div>
 						
 						<!-- Manage Specializations Table -->
-						<div class="table-card-glass">
-							<div class="card-header-section">
-								<div class="card-header-left">
-									<div class="card-icon-badge">
+						<div class="table-card">
+							<div class="table-header">
+								<div class="table-header-left">
+									<div class="table-icon">
 										<i class="fas fa-list"></i>
 									</div>
 									<div>
-										<h2 class="card-title-main">Manage Specializations</h2>
-										<p class="card-subtitle">View and manage all medical specializations</p>
+										<h2 class="table-title">Manage Specializations</h2>
+										<p class="table-subtitle">View and manage all medical specializations</p>
 									</div>
 								</div>
 								<div>
@@ -664,11 +586,11 @@ $_SESSION['msg']="data deleted !!";
 								<table class="table-modern">
 									<thead>
 										<tr>
-											<th style="text-align: center;">#</th>
+											<th>#</th>
 											<th>SPECIALIZATION</th>
 											<th>CREATION DATE</th>
 											<th>LAST UPDATE</th>
-											<th style="text-align: center;">ACTIONS</th>
+											<th>ACTIONS</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -685,36 +607,27 @@ $_SESSION['msg']="data deleted !!";
 											<td class="cell-number"><?php echo $cnt;?></td>
 											<td>
 												<span class="cell-specialization">
-													<i class="fas fa-briefcase-medical" style="color: #667eea; margin-right: 8px;"></i>
 													<?php echo htmlentities($row['specilization']);?>
 												</span>
 											</td>
+											<td><?php echo htmlentities($row['creationDate']);?></td>
 											<td>
-												<span class="cell-content">
-													<i class="fas fa-calendar-plus" style="color: #10b981; margin-right: 6px;"></i>
-													<?php echo htmlentities($row['creationDate']);?>
-												</span>
-											</td>
-											<td>
-												<span class="cell-content">
-													<?php if($row['updationDate']): ?>
-														<i class="fas fa-calendar-check" style="color: #f59e0b; margin-right: 6px;"></i>
-														<?php echo htmlentities($row['updationDate']);?>
-													<?php else: ?>
-														<span style="color: #94a3b8; font-style: italic;">Not updated</span>
-													<?php endif; ?>
-												</span>
+												<?php if($row['updationDate']): ?>
+													<?php echo htmlentities($row['updationDate']);?>
+												<?php else: ?>
+													<span style="color: #94a3b8; font-style: italic;">Not updated</span>
+												<?php endif; ?>
 											</td>
 											<td>
 												<a href="edit-doctor-specialization.php?id=<?php echo $row['id'];?>" 
 												   class="btn-action btn-edit"
-												   title="Edit Specialization">
+												   title="Edit">
 													<i class="fas fa-edit"></i>
 												</a>
 												<a href="doctor-specilization.php?id=<?php echo $row['id']?>&del=delete" 
-												   onclick="return confirm('Are you sure you want to delete this specialization?')"
+												   onclick="return confirm('Are you sure you want to delete?')"
 												   class="btn-action btn-delete"
-												   title="Delete Specialization">
+												   title="Delete">
 													<i class="fas fa-trash"></i>
 												</a>
 											</td>
@@ -748,11 +661,9 @@ $_SESSION['msg']="data deleted !!";
 				</div>
 			</div>
 			
+			<!-- Settings -->
+			<?php include('include/setting.php');?>
 		</div>
-			
-		<!-- Settings -->
-		<?php include('include/setting.php');?>
-	</div>
 		
 		<!-- Main JavaScripts -->
 		<script src="vendor/jquery/jquery.min.js"></script>
@@ -761,25 +672,11 @@ $_SESSION['msg']="data deleted !!";
 		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
 		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 		<script src="vendor/switchery/switchery.min.js"></script>
-		
-		<!-- Page Specific JavaScripts -->
-		<script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
-		<script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-		<script src="vendor/autosize/autosize.min.js"></script>
-		<script src="vendor/selectFx/classie.js"></script>
-		<script src="vendor/selectFx/selectFx.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
-		<script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-		<script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-		
-		<!-- Theme JavaScripts -->
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/form-elements.js"></script>
 		
 		<script>
 			jQuery(document).ready(function() {
 				Main.init();
-				FormElements.init();
 			});
 		</script>
 	</body>

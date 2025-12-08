@@ -55,140 +55,122 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 	
 	.main-content {
 		background: #f0f4f8;
-		padding: 35px 40px;
 	}
 	
-	/* Modern Page Header with Gradient */
-	.page-header-modern {
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		border-radius: 24px;
-		padding: 45px 50px;
-		margin-bottom: 40px;
-		color: #ffffff;
-		box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
-		position: relative;
-		overflow: hidden;
+	.wrap-content {
+		padding: 40px 30px;
 	}
 	
-	.page-header-modern::before {
-		content: '';
-		position: absolute;
-		top: -50%;
-		right: -20%;
-		width: 400px;
-		height: 400px;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 50%;
+	/* Simple Page Title - Like Dashboard */
+	#page-title {
+		background: transparent;
+		padding: 0 0 40px 0;
+		border: none;
 	}
 	
-	.page-header-modern h1 {
+	#page-title .mainTitle {
 		font-size: 36px;
 		font-weight: 800;
-		margin-bottom: 10px;
-		display: flex;
-		align-items: center;
-		gap: 15px;
-		position: relative;
-		z-index: 1;
-		letter-spacing: -0.5px;
-	}
-	
-	.page-header-modern p {
-		font-size: 16px;
-		opacity: 0.95;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 		margin: 0;
-		position: relative;
-		z-index: 1;
+		letter-spacing: -1px;
 	}
 	
-	.breadcrumb-modern {
-		background: rgba(255, 255, 255, 0.15);
-		backdrop-filter: blur(10px);
-		padding: 12px 24px;
-		border-radius: 30px;
-		display: inline-flex;
+	#page-title .breadcrumb {
+		background: transparent;
+		padding: 12px 0;
+		margin: 12px 0 0 0;
+		font-size: 14px;
+	}
+	
+	#page-title .breadcrumb li {
+		color: #64748b;
+		font-weight: 400;
+	}
+	
+	#page-title .breadcrumb li.active {
+		color: #334155;
+		font-weight: 600;
+	}
+	
+	/* Info Alert Box */
+	.info-alert {
+		background: #fef3c7;
+		border-left: 4px solid #f59e0b;
+		border-radius: 12px;
+		padding: 16px 20px;
+		margin-bottom: 30px;
+		display: flex;
 		align-items: center;
 		gap: 12px;
+	}
+	
+	.info-alert i {
+		color: #f59e0b;
+		font-size: 20px;
+		flex-shrink: 0;
+	}
+	
+	.info-alert-text {
+		color: #92400e;
 		font-size: 14px;
-		position: relative;
-		z-index: 1;
-		margin-top: 20px;
-	}
-	
-	.breadcrumb-modern span {
-		color: rgba(255, 255, 255, 0.85);
 		font-weight: 500;
+		margin: 0;
 	}
 	
-	.breadcrumb-modern .active {
-		color: #ffffff;
-		font-weight: 700;
+	/* Simple White Form Card */
+	.form-card {
+		background: #ffffff;
+		border-radius: 16px;
+		padding: 35px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 	}
 	
-	.breadcrumb-modern i {
-		color: rgba(255, 255, 255, 0.6);
-		font-size: 12px;
-	}
-	
-	/* Glass Form Card */
-	.form-card-glass {
-		background: rgba(255, 255, 255, 0.95);
-		backdrop-filter: blur(20px);
-		border-radius: 24px;
-		padding: 40px;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-		border: 1px solid rgba(255, 255, 255, 0.7);
-		transition: all 0.4s ease;
-	}
-	
-	.form-card-glass:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-	}
-	
-	.card-header-section {
+	.form-header {
 		display: flex;
 		align-items: center;
-		gap: 15px;
-		margin-bottom: 35px;
-		padding-bottom: 25px;
+		gap: 12px;
+		margin-bottom: 30px;
+		padding-bottom: 20px;
 		border-bottom: 2px solid #e2e8f0;
 	}
 	
-	.card-icon-badge {
-		width: 56px;
-		height: 56px;
+	.form-icon {
+		width: 48px;
+		height: 48px;
 		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		border-radius: 16px;
+		border-radius: 12px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+		box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 	}
 	
-	.card-icon-badge i {
+	.form-icon i {
 		color: #ffffff;
-		font-size: 24px;
+		font-size: 20px;
 	}
 	
-	.card-title-main {
-		font-size: 24px;
+	.form-title {
+		font-size: 20px;
 		font-weight: 700;
 		color: #0f172a;
 		margin: 0;
-		letter-spacing: -0.5px;
 	}
 	
 	/* Form Groups */
 	.form-group-modern {
-		margin-bottom: 28px;
+		margin-bottom: 24px;
 	}
 	
 	.form-label-modern {
 		font-weight: 600;
 		color: #334155;
-		margin-bottom: 12px;
-		font-size: 15px;
+		margin-bottom: 10px;
+		font-size: 14px;
 		display: flex;
 		align-items: center;
 		gap: 8px;
@@ -196,7 +178,7 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 	
 	.form-label-modern i {
 		color: #667eea;
-		font-size: 16px;
+		font-size: 14px;
 	}
 	
 	.form-label-modern .required {
@@ -208,10 +190,10 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 	.select-modern,
 	.textarea-modern {
 		width: 100%;
-		padding: 16px 20px;
+		padding: 14px 18px;
 		border: 2px solid #e2e8f0;
-		border-radius: 14px;
-		font-size: 15px;
+		border-radius: 12px;
+		font-size: 14px;
 		transition: all 0.3s ease;
 		background: #ffffff;
 		color: #1e293b;
@@ -226,7 +208,7 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 	}
 	
 	.textarea-modern {
-		min-height: 120px;
+		min-height: 100px;
 		resize: vertical;
 	}
 	
@@ -234,8 +216,8 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 		appearance: none;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
 		background-repeat: no-repeat;
-		background-position: right 20px center;
-		padding-right: 50px;
+		background-position: right 18px center;
+		padding-right: 45px;
 	}
 	
 	/* Input with Icon */
@@ -245,122 +227,37 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 	
 	.input-icon {
 		position: absolute;
-		left: 20px;
+		left: 18px;
 		top: 50%;
 		transform: translateY(-50%);
 		color: #94a3b8;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	
 	.input-with-icon {
-		padding-left: 55px;
+		padding-left: 48px;
+	}
+	
+	/* Helper Text */
+	.helper-text {
+		font-size: 12px;
+		color: #64748b;
+		margin-top: 6px;
 	}
 	
 	/* Availability Status */
 	#email-availability-status {
 		display: block;
-		margin-top: 8px;
+		margin-top: 6px;
 		font-size: 13px;
 		font-weight: 600;
-	}
-	
-	/* Action Buttons */
-	.action-buttons-modern {
-		display: flex;
-		gap: 16px;
-		margin-top: 40px;
-		padding-top: 30px;
-		border-top: 2px solid #e2e8f0;
-	}
-	
-	.btn-modern {
-		padding: 16px 40px;
-		border-radius: 14px;
-		font-weight: 700;
-		font-size: 16px;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		display: flex;
-		align-items: center;
-		gap: 12px;
-		border: none;
-		letter-spacing: 0.3px;
-	}
-	
-	.btn-submit-modern {
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		color: #ffffff;
-		box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-	}
-	
-	.btn-submit-modern:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
-	}
-	
-	.btn-reset-modern {
-		background: #ffffff;
-		color: #475569;
-		border: 2px solid #e2e8f0;
-	}
-	
-	.btn-reset-modern:hover {
-		background: #f8fafc;
-		border-color: #cbd5e1;
-		transform: translateY(-2px);
-	}
-	
-	/* Helper Text */
-	.helper-text {
-		font-size: 13px;
-		color: #64748b;
-		margin-top: 8px;
-		display: flex;
-		align-items: center;
-		gap: 6px;
-	}
-	
-	.helper-text i {
-		color: #94a3b8;
-		font-size: 14px;
-	}
-	
-	/* Info Box */
-	.info-box {
-		background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
-		border-left: 4px solid #667eea;
-		border-radius: 12px;
-		padding: 20px;
-		margin-bottom: 30px;
-	}
-	
-	.info-box-title {
-		font-weight: 700;
-		color: #1e293b;
-		margin-bottom: 8px;
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		font-size: 15px;
-	}
-	
-	.info-box-title i {
-		color: #667eea;
-		font-size: 18px;
-	}
-	
-	.info-box-text {
-		color: #475569;
-		font-size: 14px;
-		line-height: 1.6;
-		margin: 0;
 	}
 	
 	/* Loading Spinner */
 	#loaderIcon {
 		display: inline-block;
-		width: 16px;
-		height: 16px;
+		width: 14px;
+		height: 14px;
 		border: 2px solid #667eea;
 		border-top-color: transparent;
 		border-radius: 50%;
@@ -372,33 +269,48 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 		to { transform: rotate(360deg); }
 	}
 	
-	/* Responsive */
-	@media (max-width: 768px) {
-		.main-content {
-			padding: 20px 16px;
-		}
-		
-		.page-header-modern {
-			padding: 30px 24px;
-			border-radius: 16px;
-		}
-		
-		.page-header-modern h1 {
-			font-size: 28px;
-		}
-		
-		.form-card-glass {
-			padding: 28px 20px;
-		}
-		
-		.action-buttons-modern {
-			flex-direction: column;
-		}
-		
-		.btn-modern {
-			width: 100%;
-			justify-content: center;
-		}
+	/* Action Buttons */
+	.action-buttons {
+		display: flex;
+		gap: 12px;
+		margin-top: 30px;
+		padding-top: 25px;
+		border-top: 2px solid #e2e8f0;
+	}
+	
+	.btn-modern {
+		padding: 14px 32px;
+		border-radius: 12px;
+		font-weight: 600;
+		font-size: 15px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		border: none;
+	}
+	
+	.btn-submit {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: #ffffff;
+		box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+	}
+	
+	.btn-submit:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+	}
+	
+	.btn-reset {
+		background: #ffffff;
+		color: #475569;
+		border: 2px solid #e2e8f0;
+	}
+	
+	.btn-reset:hover {
+		background: #f8fafc;
+		border-color: #cbd5e1;
 	}
 	
 	/* Container Overrides */
@@ -416,6 +328,30 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 	
 	.panel-body {
 		padding: 0;
+	}
+	
+	/* Responsive */
+	@media (max-width: 768px) {
+		.wrap-content {
+			padding: 24px 16px;
+		}
+		
+		#page-title .mainTitle {
+			font-size: 28px;
+		}
+		
+		.form-card {
+			padding: 24px 20px;
+		}
+		
+		.action-buttons {
+			flex-direction: column;
+		}
+		
+		.btn-modern {
+			width: 100%;
+			justify-content: center;
+		}
 	}
 </style>
 
@@ -459,21 +395,25 @@ error:function (){}
 				<div class="main-content" >
 					<div class="wrap-content container" id="container">
 						
-						<!-- Modern Page Header -->
-						<div class="page-header-modern">
-							<h1>
-								<i class="fas fa-user-md"></i>
-								Add New Doctor
-							</h1>
-							<p>Add a new doctor to the hospital management system</p>
-							<div class="breadcrumb-modern">
-								<span>Admin</span>
-								<i class="fas fa-chevron-right"></i>
-								<span>Doctors</span>
-								<i class="fas fa-chevron-right"></i>
-								<span class="active">Add Doctor</span>
+						<!-- Simple Page Title - Like Dashboard -->
+						<section id="page-title">
+							<div class="row">
+								<div class="col-sm-8">
+									<h1 class="mainTitle">Add Doctor</h1>
+								</div>
+								<ol class="breadcrumb">
+									<li>
+										<span>Admin</span>
+									</li>
+									<li>
+										<span>Doctors</span>
+									</li>
+									<li class="active">
+										<span>Add Doctor</span>
+									</li>
+								</ol>
 							</div>
-						</div>
+						</section>
 						
 						<!-- Form Section -->
 						<div class="container-fluid container-fullw bg-white">
@@ -484,22 +424,19 @@ error:function (){}
 											<div class="panel panel-white">
 												<div class="panel-body">
 													
-													<div class="info-box">
-														<div class="info-box-title">
-															<i class="fas fa-info-circle"></i>
-															Important Information
-														</div>
-														<p class="info-box-text">
-															Please fill in all required fields marked with <span style="color: #ef4444;">*</span>. The doctor will receive login credentials via email after registration.
+													<div class="info-alert">
+														<i class="fas fa-info-circle"></i>
+														<p class="info-alert-text">
+															Please fill in all required fields marked with <span style="color: #ef4444;">*</span>. The doctor will receive login credentials via email.
 														</p>
 													</div>
 													
-													<div class="form-card-glass">
-														<div class="card-header-section">
-															<div class="card-icon-badge">
+													<div class="form-card">
+														<div class="form-header">
+															<div class="form-icon">
 																<i class="fas fa-user-doctor"></i>
 															</div>
-															<h2 class="card-title-main">Doctor Information</h2>
+															<h2 class="form-title">Doctor Information</h2>
 														</div>
 													
 														<form role="form" name="adddoc" method="post" onSubmit="return valid();">
@@ -522,10 +459,6 @@ error:function (){}
 																	</option>
 																	<?php } ?>
 																</select>
-																<div class="helper-text">
-																	<i class="fas fa-circle-info"></i>
-																	Choose the doctor's area of expertise
-																</div>
 															</div>
 
 															<!-- Doctor Name -->
@@ -545,7 +478,7 @@ error:function (){}
 															<div class="form-group-modern">
 																<label class="form-label-modern">
 																	<i class="fas fa-location-dot"></i>
-																	Doctor Clinic Address
+																	Clinic Address
 																	<span class="required">*</span>
 																</label>
 																<textarea name="clinicaddress" class="textarea-modern" placeholder="Enter Complete Clinic Address" required="true"></textarea>
@@ -560,11 +493,7 @@ error:function (){}
 																</label>
 																<div class="input-group-modern">
 																	<i class="fas fa-money-bill-wave input-icon"></i>
-																	<input type="text" name="docfees" class="input-modern input-with-icon" placeholder="Enter Consultation Fee Amount" required="true">
-																</div>
-																<div class="helper-text">
-																	<i class="fas fa-circle-info"></i>
-																	Enter fee in your local currency
+																	<input type="text" name="docfees" class="input-modern input-with-icon" placeholder="Enter Fee Amount" required="true">
 																</div>
 															</div>
 															
@@ -607,10 +536,7 @@ error:function (){}
 																	<i class="fas fa-key input-icon"></i>
 																	<input type="password" name="npass" class="input-modern input-with-icon" placeholder="Create Strong Password" required="required">
 																</div>
-																<div class="helper-text">
-																	<i class="fas fa-circle-info"></i>
-																	Minimum 8 characters with letters and numbers
-																</div>
+																<p class="helper-text">Minimum 8 characters with letters and numbers</p>
 															</div>
 															
 															<!-- Confirm Password -->
@@ -627,12 +553,12 @@ error:function (){}
 															</div>
 															
 															<!-- Action Buttons -->
-															<div class="action-buttons-modern">
-																<button type="submit" name="submit" id="submit" class="btn-modern btn-submit-modern">
+															<div class="action-buttons">
+																<button type="submit" name="submit" id="submit" class="btn-modern btn-submit">
 																	<i class="fas fa-check-circle"></i>
 																	Add Doctor
 																</button>
-																<button type="reset" class="btn-modern btn-reset-modern">
+																<button type="reset" class="btn-modern btn-reset">
 																	<i class="fas fa-rotate-left"></i>
 																	Reset Form
 																</button>
@@ -651,7 +577,6 @@ error:function (){}
 				</div>
 			</div>
 			<!-- start: FOOTER -->
-	<?php include('include/footer.php');?>
 			<!-- end: FOOTER -->
 		
 			<!-- start: SETTINGS -->
